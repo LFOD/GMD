@@ -28,3 +28,19 @@ drive_url <- "https://www.googleapis.com/drive/v2/files/"
   } else
     stop("This url doesn't look like it comes from editing a Google Document")
 }
+
+#run this to set the package options at the begining of loading package.
+.onLoad <- function(libname, pkgname){
+
+  opts <- options()
+
+  opts.GMD <- list(
+    GMD.client_id = "806472246495-9mlnl4sc8spvg2g2r4vg1ch6pukabtkh.apps.googleusercontent.com",
+    GMD.client_secret = "UdDQDSWvwO0pxr_VxR7SN29o",
+    GMD.redirect_uri = "http://127.0.0.1:1410",
+    GMD.cached_token = TRUE #not sure if I need this exactly.
+  )
+
+  options(opts.GMD)
+  invisible()
+}
