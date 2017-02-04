@@ -4,3 +4,4 @@
 .httr-oauth
 test.R
 *.Rmd
+*.pdf
