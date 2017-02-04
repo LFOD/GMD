@@ -4,12 +4,14 @@
 \alias{GMD}
 \title{Create an R Markdown document from a Google Document}
 \usage{
-GMD(doc, token)
+GMD(doc, token, output_name = NULL)
 }
 \arguments{
 \item{doc}{your google documents unique ID or edit URL. The unique ID can be obtained by using the `doc_tbl()` function and navigating to your document of interest. The edit URL is the Google Doc url you use to edit the document.}
 
 \item{token}{your google authentication token}
+
+\item{output_name}{the desire file name (sans extension). Defaults to google doc name.}
 }
 \value{
 creates a `.Rmd` file in your working directory and, if specified, renders the document

@@ -2,6 +2,6 @@
 
 export(GMD)
 export(doc_tbl)
+export(get_auth)
 export(live_update)
 export(render_doc)
-export(get_auth)

@@ -15,9 +15,17 @@
 live_update <- function(document, refresh_rate = 1){
 
   position <- "." #progress dots
-
-  while(T){
-
+  # win1 <- tcltk::tktoplevel()
+  # butStop <- tcltk::tkbutton(win1, text = "Stop",
+  #                     command = function() {
+  #                       assign("stoploop", TRUE, envir=.GlobalEnv)
+  #                       tcltk::tkdestroy(win1)
+  #                     })
+  # tcltk::tkgrid(butStop)
+  #
+  # stoploop <- FALSE
+  # while(!stoploop){
+  while(TRUE){
     document() #download document
 
     position <- paste0(position, ".") #add another progress dot.

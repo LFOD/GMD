@@ -1,7 +1,7 @@
 #' Render Google Document as html or pdf
 #'
-#' @param client_id the client id from a google api account. You most likely want to leave this to default
-#' @param run_doc the client secret for the api account. Again you most likely want to leave this as default
+#' @param client_id the client id from a Google API account. You most likely want to leave this to default
+#' @param client_secret the client secret from a Google API account. You most likely want to leave this to default
 #' @param cache_token do you want us to cache the token for you? Aka not have to log in every time you do this.
 #'
 #' @return rendered pdf or html document
