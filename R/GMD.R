@@ -38,8 +38,9 @@ GMD <- function(doc, token, output_name = NULL){
     } else {
       text <- .get_docs(url = text_url, token)
       #remove the smart quotes so R doesnt freak out.
-      text_clean_1 <- gsub("“|”", "\"", text)
-      text_clean_2 <- gsub("‘|’", "'", text_clean_1)
+      # text_clean_1 <- gsub("“|”", "\"", text)
+      text_clean_1 <- gsub('\U201C|\U201D', "\"", text)
+      text_clean_2 <- gsub("\U2018|\U2019", "'", text_clean_1)
 
       write(text_clean_2, file = filename)
       cat("Saving ", filename)
