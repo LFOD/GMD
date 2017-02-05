@@ -22,10 +22,9 @@ library('GMD')
 
 ## Demo
 
-Until we build our own authentication, use the lovely Jenny Bryans:
-
+Allow for `R` to access your Google Doc
 ```
-token <- googlesheets::gs_auth()
+token <- get_auth()
 ```
 
 Copy the URL you see when editing your Google Doc & use our function GMD to render it as an `.Rmd` file. For example:
