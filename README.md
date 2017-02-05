@@ -43,7 +43,7 @@ By default, this will add a `.Rmd` file to your current working directory. If yo
 live_update(my_doc)
 ```
 
-### If you are into pipes
+### If you ❤️ pipes
 
 ```
 edit_url <- "https://docs.google.com/document/d/1RTCQ67mpZTKe9ddllVNCBom5uC2KMFjktKHb1mjWKOM/edit"
