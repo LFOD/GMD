@@ -43,7 +43,7 @@ GMD <- function(doc, token, output_name = NULL){
       text_clean_2 <- gsub("\U2018|\U2019", "'", text_clean_1)
 
       write(text_clean_2, file = filename)
-      cat("Saving ", filename)
+      cat("Saving", filename, "to your working directory")
     }  }
   formals(get_doc) <- list(printLoc = FALSE, filename = filename, token = token, text_url = text_url)
   return(get_doc)
