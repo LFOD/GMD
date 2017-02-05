@@ -25,12 +25,14 @@ live_update <- function(document, refresh_rate = 1){
   #
   # stoploop <- FALSE
   # while(!stoploop){
-  while(TRUE){
+
+  while(TRUE) {
     document() #download document
 
     position <- paste0(position, ".") #add another progress dot.
     cat("\014")
     cat(" \r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r\r", cowsay::say(paste0("Watching for updates.", position), by = "monkey", type = "string"))
+    cat("Hit ESC to stop (until we build something fancier \xF0\x9F\x99\x88) \n")
     utils::flush.console()
 
     #If we've been filling bar for a while reset it.
