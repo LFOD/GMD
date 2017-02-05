@@ -1,6 +1,15 @@
 drive_url <- "https://www.googleapis.com/drive/v2/files/"
 
 .get_docs <- function(url = drive_url, token = token) {
+
+  #check if token is real token
+  if (!typeof(token)=="environment") stop("Your token is not valid. Please use the `get_auth()` function to create a valid token.")
+
+  #check token is still current
+  if (!token$validate()) {
+   token <- get_auth()
+  }
+
   req <- httr::GET(url,token)
   if (req$status_code >= 400) {
     stop(
